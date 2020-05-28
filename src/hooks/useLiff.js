@@ -8,10 +8,7 @@ function useLiff({ liffId }) {
   const initLiff = async ({ liffId }) => {
     setLoading(true);
     try {
-      await liff.init({ liffId }).then(() => {
-        console.log("It came upto here");
-        alert("success liff init");
-      });
+      await liff.init({ liffId });
     } catch (error) {
       alert({ error });
       setError(error);
