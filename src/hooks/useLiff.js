@@ -1,4 +1,5 @@
 import { liff } from "../lib/liff";
+import { useState, useEffect } from "react";
 
 function useLiff({ liffId }) {
   const [loading, setLoading] = useState(false);
@@ -8,7 +9,6 @@ function useLiff({ liffId }) {
     setLoading(true);
     try {
       await liff.init({ liffId }).then(() => {
-        initializeApp();
         alert("success liff init");
       });
     } catch (error) {
