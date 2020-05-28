@@ -9,6 +9,7 @@ function useLiff({ liffId }) {
     setLoading(true);
     try {
       await liff.init({ liffId }).then(() => {
+        console.log("It came upto here");
         alert("success liff init");
       });
     } catch (error) {
